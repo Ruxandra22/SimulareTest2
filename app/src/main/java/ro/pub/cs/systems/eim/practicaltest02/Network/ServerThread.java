@@ -32,11 +32,11 @@ public class ServerThread extends Thread {
     }
 
     private ServerSocket serverSocket = null;
-    private HashMap data;
+//    private HashMap data;
 
     public ServerThread(int port) {
 
-        data = new HashMap<String, WeatherForecastInformation>();
+//        data = new HashMap<String, WeatherForecastInformation>();
 
         try {
             serverSocket = new ServerSocket(port);
@@ -48,13 +48,13 @@ public class ServerThread extends Thread {
         }
     }
 
-    public synchronized void setData(String city, WeatherForecastInformation weatherForecastInformation) {
-        this.data.put(city, weatherForecastInformation);
-    }
-
-    public synchronized HashMap<String, WeatherForecastInformation> getData() {
-        return data;
-    }
+//    public synchronized void setData(String city, WeatherForecastInformation weatherForecastInformation) {
+//        this.data.put(city, weatherForecastInformation);
+//    }
+//
+//    public synchronized HashMap<String, WeatherForecastInformation> getData() {
+//        return data;
+//    }
 
     @Override
     public void run() {
